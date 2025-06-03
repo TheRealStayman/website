@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio Website</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body class="page-with-sidebar has-project-sidebar">
+        <!-- Desktop Sidebar -->
+        <div class="page-sidebar desktop-only">
+            <div class="sidebar-hamburger-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+            <nav class="sidebar-nav">
+                <ul><li>
+                            <a href="/"
+                               class="sidebar-link">
+                                <span class="link-text">Home</span></a>
+                        </li><li>
+                            <a href="/work-experience/"
+                               class="sidebar-link">
+                                <span class="link-text">Work Experience</span></a>
+                        </li><li>
+                            <a href="/projects/"
+                               class="sidebar-link">
+                                <span class="link-text">Projects</span></a>
+                        </li><li>
+                            <a href="/leadership-service/"
+                               class="sidebar-link">
+                                <span class="link-text">Leadership &amp; Service</span></a>
+                        </li></ul>
+            </nav>
+            <div class="sidebar-social-links">
+                <a href="http://www.linkedin.com/in/thomas-stay-33b2a2259"
+                   title="LinkedIn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/TheRealStayman"
+                   title="GitHub"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="mailto:thomasstay@gmail.com" title="Email">
+                   <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Mobile Header and Navigation -->
+        <div class="mobile-only">
+            <header class="mobile-header">
+  <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <a href="/" class="mobile-logo">Thomas Stay</a>
+</header>
+
+<!-- Mobile Navigation Panel -->
+<div class="mobile-nav-panel">
+  <div class="mobile-nav-header">
+    <div class="mobile-nav-title">
+      <button class="back-arrow" aria-label="Back to main menu">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+      </button>
+      <h2>Menu</h2>
+    </div>
+    <button class="mobile-nav-close" aria-label="Close menu">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  
+  <!-- Main Navigation -->
+  <div class="mobile-main-nav active">
+    <nav class="mobile-nav-list">
+      <a href="/" >Home</a>
+      <a href="/work-experience/" >Work Experience</a>
+      <!-- Add data attribute for special handling -->
+      <a href="#" data-submenu="projects" class="has-submenu active">
+        Projects
+        <span class="submenu-arrow">›</span>
+      </a>
+      <a href="/leadership-service/" >Leadership & Service</a>
+    </nav>
+    
+    <div class="mobile-social-links">
+      <a href="http://www.linkedin.com/in/thomas-stay-33b2a2259" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a href="https://github.com/TheRealStayman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <a href="mailto:thomasstay@gmail.com" aria-label="Email">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Project Navigation (if on a project page) -->
+  <div class="mobile-project-nav">
+    <nav class="mobile-nav-list projects-list"><a href="/projects/portfolio-website/" 
+           class="active">
+          Portfolio Website
+        </a><a href="/projects/stock-analysis-v1/" 
+           >
+          Stock Analysis v1
+        </a><a href="/projects/alexandria/" 
+           >
+          Alexandria
+        </a><a href="/projects/face-controller/" 
+           >
+          Face Controller
+        </a><a href="/projects/midi-reader/" 
+           >
+          MIDI Reader
+        </a></nav>
+  </div>
+</div>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav-overlay"></div>
+
+            <div class="mobile-spacer"></div>
+        </div>
+        
+        
+<!-- Secondary sidebar specific to project pages (desktop only) -->
+<div class="page-sidebar project-sidebar desktop-only">
+    <div class="sidebar-hamburger-icon project-hamburger">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </div>
+    <nav class="sidebar-nav">
+        <ul><li>
+                    <a href="/projects/portfolio-website/"
+                        class="sidebar-link active-link">
+                        <span class="link-text">Portfolio Website</span><span class="active-indicator"></span></a>
+                </li><li>
+                    <a href="/projects/stock-analysis-v1/"
+                        class="sidebar-link">
+                        <span class="link-text">Stock Analysis v1</span></a>
+                </li><li>
+                    <a href="/projects/alexandria/"
+                        class="sidebar-link">
+                        <span class="link-text">Alexandria</span></a>
+                </li><li>
+                    <a href="/projects/face-controller/"
+                        class="sidebar-link">
+                        <span class="link-text">Face Controller</span></a>
+                </li><li>
+                    <a href="/projects/midi-reader/"
+                        class="sidebar-link">
+                        <span class="link-text">MIDI Reader</span></a>
+                </li></ul>
+    </nav>
+</div>
+
+<div class="main-content-area project-content-area">
+    
+<div class="project-container">
+    <div class="project-header">
+        <h1 class="project-title">My Portfolio Website</h1>
+        <div class="project-meta">
+            <span>Date: May 2025 - May 2025</span>
+            <span>Category: Web Development, UI/UX Design, Frontend Development</span>
+            <span>Technologies: Eleventy, Nunjucks, CSS3, JavaScript (ES6+), HTML5, GitHub Pages</span>
+        </div>
+    </div>
+    
+    <div class="project-description">
+        <p>This project is the very website you are currently viewing – a personal portfolio meticulously designed and developed from scratch to showcase my skills and projects. Built with the static site generator Eleventy and templated using Nunjucks, it features a unique, custom-crafted aesthetic. Heavy emphasis was placed on creating an engaging and interactive user experience through custom CSS animations and JavaScript-driven dynamic elements.</p>
+    </div>
+    
+    
+    <div class="project-section">
+        <h2 class="project-section-title">Features</h2>
+        <ul>
+            
+            <li>Unique, fully custom-coded visual design and layout.</li>
+            
+            <li>Interactive home page card carousel with scroll-driven highlighting.</li>
+            
+            <li>Custom page transition: white circle wipe originating from mouse click.</li>
+            
+            <li>Hover-activated sidebars with smooth expansion animation.</li>
+            
+            <li>Interactive &quot;pop-out&quot; effect for sidebar navigation links on hover.</li>
+            
+            <li>Multi-page architecture: Home, Work Experience, Projects, Community/Service.</li>
+            
+            <li>Dedicated individual pages for each featured project.</li>
+            
+            <li>Static site generation using Eleventy for performance and security.</li>
+            
+            <li>Templating with Nunjucks for modular and maintainable code.</li>
+            
+            <li>Deployment via GitHub Pages.</li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="project-section">
+        <h2 class="project-section-title">Gallery</h2>
+        <div class="project-gallery">
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/homepage-desktop.png" alt="Desktop view of the homepage of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/work-experience-desktop.png" alt="Desktop view of the work experience page of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/projects-desktop.png" alt="Desktop view of the projects page of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/leadership-service-desktop.png" alt="Desktop view of the leadership and service page of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/project-example-desktop.png" alt="Desktop view of the face controller page of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/sidebar-desktop.png" alt="Desktop view of the sidebar of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/homepage-mobile-header.png" alt="Mobile view of the banner of the homepage of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/homepage-mobile-cards.png" alt="Mobile view of the cards on the homepage of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/work-experience-mobile.png" alt="Mobile view of the work experience page of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/leadership-service-mobile.png" alt="Mobile view of the leadership and service page of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/project-example-mobile.png" alt="Mobile view of the stock analysis page of this website">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/portfolio-website/sidebar-mobile.png" alt="Mobile view of the sidebar of this website">
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="project-section">
+        <h2 class="project-section-title">Technical Details</h2>
+        <p>The foundation of this website is Eleventy, a flexible static site generator. Nunjucks was utilized as the templating language to manage reusable layouts and components, such as headers, footers, and page structures. The visual styling, including the responsive design, complex animations for the card carousel, page transitions, and interactive sidebars, was implemented entirely with custom CSS3. Vanilla JavaScript was employed to add interactivity and dynamic behaviors, such as managing the state of the carousel highlighting based on scroll position, triggering the page transition animations from the point of click, and handling the hover effects for the pop-out sidebars. The final static site is efficiently hosted on GitHub Pages.</p>
+    </div>
+    
+    
+    
+    <div class="project-links">
+        
+        <a href="https://github.com/TheRealStayman/my-portfolio" class="project-button project-button-primary" 
+           target="_blank" rel="noopener noreferrer"
+           >
+            <span>GitHub</span>
+        </a>
+        
+    </div>
+    
+</div>
+
+<!-- Add the gallery lightbox script -->
+<link rel="stylesheet" href="/css/gallery-lightbox.css">
+<script src="/js/gallery-lightbox.js"></script>
+
+</div>
+
+<!-- Additional page-specific scripts -->
+
+
+        
+        <script src="/js/main.js"></script>
+        <script src="/js/page-transitions.js"></script>
+        <script src="/js/card-expander.js"></script>
+    </body>
+</html>

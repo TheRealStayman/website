@@ -1,0 +1,168 @@
+.gallery-lightbox {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-lightbox.active {
+    opacity: 1;
+}
+
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-container {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.lightbox-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.lightbox-image-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-out;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.lightbox-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Allow clicks to pass through to the image */
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lightbox-nav {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    pointer-events: auto; /* Ensure buttons are clickable */
+    z-index: 10000;
+}
+
+.lightbox-prev {
+    left: 20px; /* Position from edge of screen */
+}
+
+.lightbox-next {
+    right: 20px; /* Position from edge of screen */
+}
+
+.lightbox-nav svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 15px;
+    pointer-events: auto;
+}
+
+.project-gallery-image {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.project-gallery-image:hover {
+    transform: scale(1.03);
+}
+
+/* Add swipe animation styles */
+.lightbox-image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.lightbox-image-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-out;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox-image {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.swiping .lightbox-image-wrapper {
+    transition: none; /* Disable transition during active swipe */
+}
+
+/* Add a shorter snap transition for canceled swipes */
+.lightbox-image-wrapper.snap {
+    transition: transform 0.2s ease-out;
+}
