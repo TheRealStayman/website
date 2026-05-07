@@ -128,6 +128,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, transitionDuration - 100);
     }
 
+    // Handle browser back/forward buttons (bfcache)
+    window.addEventListener('pageshow', (event) => {
+        // event.persisted is true if the page was restored from the Back/Forward cache
+        if (event.persisted) {
+            // Find and remove any leftover transition circles that were fully expanded
+            const activeCircles = document.querySelectorAll('.transition-circle');
+            activeCircles.forEach(circle => circle.remove());
+            
+            // Reset the session storage just to be safe
+            sessionStorage.removeItem('transitionActive');
+            sessionStorage.removeItem('transitionClickX');
+            sessionStorage.removeItem('transitionClickY');
+        }
+    });
+
     // Initialize
     checkForRevealTransition();
     setupLinkTransitions();
