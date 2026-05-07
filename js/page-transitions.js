@@ -125,25 +125,39 @@ document.addEventListener('DOMContentLoaded', () => {
         // Navigate after animation completes
         setTimeout(() => {
             window.location.href = href;
+
+            // Remove the circle right after triggering navigation.
+            // The UI is frozen, so there's no visual flash, but the cache saves a clean DOM.
+            setTimeout(() => {
+                circle.remove();
+            }, 20);
         }, transitionDuration - 100);
     }
-
-    // Handle browser back/forward buttons (bfcache)
-    window.addEventListener('pageshow', (event) => {
-        // event.persisted is true if the page was restored from the Back/Forward cache
-        if (event.persisted) {
-            // Find and remove any leftover transition circles that were fully expanded
-            const activeCircles = document.querySelectorAll('.transition-circle');
-            activeCircles.forEach(circle => circle.remove());
-            
-            // Reset the session storage just to be safe
-            sessionStorage.removeItem('transitionActive');
-            sessionStorage.removeItem('transitionClickX');
-            sessionStorage.removeItem('transitionClickY');
-        }
-    });
 
     // Initialize
     checkForRevealTransition();
     setupLinkTransitions();
+});
+
+// Handle browser back/forward buttons (bfcache)
+window.addEventListener('pageshow', (event) => {
+    // Unconditionally remove any outgoing transition circles
+    // On a fresh load, there are none. On a Back button press, this deletes the stuck white circle.
+    document.querySelectorAll('.transition-circle').forEach(circle => {
+        circle.remove();
+    });
+
+    // Clear out the overlay container entirely just to be safe
+    const overlayContainer = document.querySelector('.page-transition-overlay');
+    if (overlayContainer) {
+        overlayContainer.innerHTML = '';
+    }
+
+    // Clean up the incoming reveal overlays if restored from cache
+    if (event.persisted) {
+        document.querySelectorAll('.page-load-overlay').forEach(overlay => {
+            overlay.remove();
+        });
+        sessionStorage.removeItem('transitionActive');
+    }
 });
