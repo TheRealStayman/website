@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Visualization Tool</title>
+        <title>Emotional Task Manager</title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body class="page-with-sidebar has-project-sidebar">
@@ -114,7 +114,7 @@
            >
           Clicker MMO
         </a><a href="/projects/emotional-task-manager/" 
-           >
+           class="active">
           Emotional Task Manager
         </a><a href="/projects/portfolio-website/" 
            >
@@ -158,8 +158,8 @@
                         <span class="link-text">Clicker MMO</span></a>
                 </li><li>
                     <a href="/projects/emotional-task-manager/"
-                        class="sidebar-link">
-                        <span class="link-text">Emotional Task Manager</span></a>
+                        class="sidebar-link active-link">
+                        <span class="link-text">Emotional Task Manager</span><span class="active-indicator"></span></a>
                 </li><li>
                     <a href="/projects/portfolio-website/"
                         class="sidebar-link">
@@ -188,76 +188,115 @@
     
 <div class="project-container">
     <div class="project-header">
-        <h1 class="project-title">Data Visualization Tool</h1>
+        <h1 class="project-title">Emotional Task Manager</h1>
         <div class="project-meta">
-            <span>Completed: August 2023</span>
-            <span>Category: Web Development, Data Science</span>
-            <span>Technologies: D3.js, React, Python</span>
+            <span>Date: Jun 2025 - Jun 2025</span>
+            <span>Category: Systems Programming, Desktop Application, C++ Utility</span>
+            <span>Technologies: C++, Windows API, System Tray Integration, Pixel Art</span>
         </div>
     </div>
     
     <div class="project-description">
-        <p>
-            This interactive web application transforms complex datasets into intuitive visual representations, making data analysis accessible to non-technical users. The tool supports multiple file formats for data import and offers a wide range of visualization types that can be customized through a user-friendly interface.
-        </p>
-        <p>
-            Originally developed to help a non-profit organization understand their program impact data, the tool has evolved into a comprehensive platform that can handle various data types and visualization needs across different domains.
-        </p>
+        <p>The Emotional Task Manager is a lightweight C++ desktop utility designed for Windows that provides a creative alternative to standard system monitors. It visualizes current system resource usage, such as CPU and memory load, through dynamic and expressive pixel art. The application integrates seamlessly into the Windows system tray, tracking hardware metrics in the background and updating its visual state to reflect the &quot;health&quot; or &quot;stress&quot; of the computer.</p>
     </div>
+    
     
     <div class="project-section">
         <h2 class="project-section-title">Features</h2>
         <ul>
-            <li>Support for CSV, JSON, Excel, and SQL data sources</li>
-            <li>Interactive charts: bar, line, pie, scatter, heatmap, and network graphs</li>
-            <li>Drag-and-drop interface for creating visualizations</li>
-            <li>Dynamic filtering and data exploration</li>
-            <li>Real-time data updates and animations</li>
-            <li>Export options: PNG, SVG, and interactive HTML</li>
-            <li>Shareable links for collaborative analysis</li>
+            
+            <li>Real-time tracking of Windows system resource usage (CPU, RAM).</li>
+            
+            <li>Dynamic pixel art representations of system &quot;stress&quot; levels.</li>
+            
+            <li>Seamless integration into the Windows system tray notification area.</li>
+            
+            <li>Lightweight C++ architecture with a minimal performance footprint.</li>
+            
+            <li>Direct interfacing with the native Windows API for hardware metrics.</li>
+            
         </ul>
     </div>
+    
+    
     
     <div class="project-section">
         <h2 class="project-section-title">Gallery</h2>
         <div class="project-gallery">
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-1.jpg" alt="Dashboard overview with multiple charts">
+                <img src="/img/emotional-task-manager/in-use.png" alt="The virtual pet showing a moderate RAM load state while in use on a real computer">
             </div>
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-2.jpg" alt="Interactive network graph">
+                <img src="/img/emotional-task-manager/header.png" alt="A happy expression made when the computer is running smoothly with low resource usage">
             </div>
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-3.jpg" alt="Data import and transformation interface">
+                <img src="/img/emotional-task-manager/new-device.png" alt="A surprised expression made when the computer detects a new device being plugged in or unplugged">
             </div>
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-4.jpg" alt="Mobile view of visualization">
+                <img src="/img/emotional-task-manager/high-ram.png" alt="A stressed expression made when the computer is under high RAM load">
             </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/emotional-task-manager/very-high-ram.png" alt="A very stressed expression made when the computer is under very high RAM load">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/emotional-task-manager/high-cpu.png" alt="An exhausted expression made when the computer is under high CPU load">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/emotional-task-manager/very-high-cpu.png" alt="An incredibly exhausted expression made when the computer is under very high CPU load">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/emotional-task-manager/low-battery.png" alt="A sleepy expression made when the computer is running low on battery">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/emotional-task-manager/extra-low-battery.png" alt="A very sleepy expression made when the computer is running on extra low on battery">
+            </div>
+            
+            <div class="project-gallery-image">
+                <img src="/img/emotional-task-manager/in-tray.png" alt="The virtual pet looking content and the minimized application in the system tray with its options menu open">
+            </div>
+            
         </div>
     </div>
     
+    
+    
     <div class="project-section">
         <h2 class="project-section-title">Technical Details</h2>
-        <p>
-            The frontend is built with React and uses D3.js for creating dynamic, interactive visualizations. State management is handled with Redux, while styled-components provides the styling framework. For data processing, the backend uses Flask with pandas for data manipulation and scikit-learn for basic statistical analysis.
-        </p>
-        <p>
-            The application implements a microservice architecture, with separate services for data processing, user authentication, and visualization rendering. This approach ensures scalability and allows each component to be developed and updated independently.
-        </p>
+        <p>Developed entirely in C++, this application interfaces directly with the native Windows API to query real-time hardware performance metrics, such as CPU utilization and memory consumption. Instead of displaying raw numbers or standard graphs, the utility maps these telemetry values to a state machine that controls a pixel art avatar. The application registers as a background process and embeds itself within the system tray. As system load increases, the application dynamically updates the tray icon&#39;s pixel art to reflect higher stress states, offering a quick, visual heuristic of the machine&#39;s performance.</p>
     </div>
     
+    
+    
     <div class="project-links">
-        <a href="https://github.com/yourusername/data-viz-tool" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">
-            <span>View on GitHub</span>
+        
+        <a href="https://github.com/TheRealStayman/Emotional-Task-Manager" class="project-button project-button-primary" 
+           target="_blank" rel="noopener noreferrer"
+           >
+            <span>GitHub</span>
         </a>
-        <a href="https://data-viz-demo.example.com" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">
-            <span>Live Demo</span>
+        
+        <a href="https://github.com/TheRealStayman/Emotional-Task-Manager/releases" class="project-button project-button-secondary" 
+           target="_blank" rel="noopener noreferrer"
+           >
+            <span>Download</span>
         </a>
-        <a href="/downloads/data-viz-tool-installer.zip" class="project-button project-button-secondary">
-            <span>Download Desktop Version (128MB)</span>
-        </a>
+        
     </div>
+    
 </div>
+
+<!-- Add the gallery lightbox script -->
+<link rel="stylesheet" href="/css/gallery-lightbox.css">
+<script src="/js/gallery-lightbox.js"></script>
 
 </div>
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Visualization Tool</title>
+        <title>Clicker MMO</title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body class="page-with-sidebar has-project-sidebar">
@@ -111,7 +111,7 @@
   <!-- Project Navigation (if on a project page) -->
   <div class="mobile-project-nav">
     <nav class="mobile-nav-list projects-list"><a href="/projects/clicker-mmo/" 
-           >
+           class="active">
           Clicker MMO
         </a><a href="/projects/emotional-task-manager/" 
            >
@@ -154,8 +154,8 @@
     <nav class="sidebar-nav">
         <ul><li>
                     <a href="/projects/clicker-mmo/"
-                        class="sidebar-link">
-                        <span class="link-text">Clicker MMO</span></a>
+                        class="sidebar-link active-link">
+                        <span class="link-text">Clicker MMO</span><span class="active-indicator"></span></a>
                 </li><li>
                     <a href="/projects/emotional-task-manager/"
                         class="sidebar-link">
@@ -188,76 +188,95 @@
     
 <div class="project-container">
     <div class="project-header">
-        <h1 class="project-title">Data Visualization Tool</h1>
+        <h1 class="project-title">Clicker MMO</h1>
         <div class="project-meta">
-            <span>Completed: August 2023</span>
-            <span>Category: Web Development, Data Science</span>
-            <span>Technologies: D3.js, React, Python</span>
+            <span>Date: Dec 2025 - Jan 2026</span>
+            <span>Category: Game Development, Full-Stack Web Development, System Architecture</span>
+            <span>Technologies: Node.js, Socket.io, MySQL, Nginx, NSSM, Certbot, JavaScript, HTML5/CSS3</span>
         </div>
     </div>
     
     <div class="project-description">
-        <p>
-            This interactive web application transforms complex datasets into intuitive visual representations, making data analysis accessible to non-technical users. The tool supports multiple file formats for data import and offers a wide range of visualization types that can be customized through a user-friendly interface.
-        </p>
-        <p>
-            Originally developed to help a non-profit organization understand their program impact data, the tool has evolved into a comprehensive platform that can handle various data types and visualization needs across different domains.
-        </p>
+        <p>This project is a substantial multiplayer browser-based game featuring real-time cooperative gameplay. Built from the ground up, the game relies on a Node.js server utilizing Socket.io for instantaneous client-server communication. To ensure robust performance and data integrity, I architected a high-performance data layer using a MySQL database, incorporating a write-behind caching strategy to optimize throughput within an MVC framework. The application is locally hosted and securely served using a custom-configured infrastructure.</p>
     </div>
+    
     
     <div class="project-section">
         <h2 class="project-section-title">Features</h2>
         <ul>
-            <li>Support for CSV, JSON, Excel, and SQL data sources</li>
-            <li>Interactive charts: bar, line, pie, scatter, heatmap, and network graphs</li>
-            <li>Drag-and-drop interface for creating visualizations</li>
-            <li>Dynamic filtering and data exploration</li>
-            <li>Real-time data updates and animations</li>
-            <li>Export options: PNG, SVG, and interactive HTML</li>
-            <li>Shareable links for collaborative analysis</li>
+            
+            <li>Real-time cooperative multiplayer gameplay mechanics.</li>
+            
+            <li>Instantaneous bidirectional client-server communication using Socket.io.</li>
+            
+            <li>High-performance MySQL database integration for persistent player data.</li>
+            
+            <li>Custom write-behind caching strategy to optimize database throughput.</li>
+            
+            <li>Secure client connections handled via an Nginx reverse proxy.</li>
+            
+            <li>Automated SSL/TLS certificate management utilizing Certbot.</li>
+            
+            <li>Background service management implemented using NSSM for continuous uptime.</li>
+            
         </ul>
     </div>
+    
+    
     
     <div class="project-section">
         <h2 class="project-section-title">Gallery</h2>
         <div class="project-gallery">
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-1.jpg" alt="Dashboard overview with multiple charts">
+                <img src="/img/clicker-mmo/home.png" alt="Desktop view of the main game interface">
             </div>
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-2.jpg" alt="Interactive network graph">
+                <img src="/img/clicker-mmo/two-players.png" alt="Players cooperating in real-time">
             </div>
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-3.jpg" alt="Data import and transformation interface">
+                <img src="/img/clicker-mmo/visiting.png" alt="You can visit other players&#39; stations and click in them to help them out">
             </div>
+            
             <div class="project-gallery-image">
-                <img src="/img/project-data-viz-4.jpg" alt="Mobile view of visualization">
+                <img src="/img/clicker-mmo/collaborate-tab.png" alt="Players can work together to buy collaborative upgrades that benefit everyone">
             </div>
+            
         </div>
     </div>
     
+    
+    
     <div class="project-section">
         <h2 class="project-section-title">Technical Details</h2>
-        <p>
-            The frontend is built with React and uses D3.js for creating dynamic, interactive visualizations. State management is handled with Redux, while styled-components provides the styling framework. For data processing, the backend uses Flask with pandas for data manipulation and scikit-learn for basic statistical analysis.
-        </p>
-        <p>
-            The application implements a microservice architecture, with separate services for data processing, user authentication, and visualization rendering. This approach ensures scalability and allows each component to be developed and updated independently.
-        </p>
+        <p>The backend architecture is built on Node.js, leveraging Socket.io to facilitate real-time, event-based communication between the server and the web clients. The data layer utilizes MySQL, structured around an MVC (Model-View-Controller) design pattern. To handle the high frequency of database writes typical in a clicker game, a custom write-behind caching strategy was implemented, significantly reducing database bottlenecking. The deployment environment was configured locally from scratch, utilizing Nginx as a reverse proxy to route traffic securely, Certbot for SSL management, and NSSM (Non-Sucking Service Manager) to run the Node.js application smoothly as a Windows service.</p>
     </div>
     
+    
+    
     <div class="project-links">
-        <a href="https://github.com/yourusername/data-viz-tool" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">
-            <span>View on GitHub</span>
+        
+        <a href="https://github.com/TheRealStayman/Clicker-MMO" class="project-button project-button-primary" 
+           target="_blank" rel="noopener noreferrer"
+           >
+            <span>GitHub</span>
         </a>
-        <a href="https://data-viz-demo.example.com" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">
-            <span>Live Demo</span>
+        
+        <a href="https://clicker.thomasstay.com/" class="project-button project-button-secondary" 
+           target="_blank" rel="noopener noreferrer"
+           >
+            <span>View Online</span>
         </a>
-        <a href="/downloads/data-viz-tool-installer.zip" class="project-button project-button-secondary">
-            <span>Download Desktop Version (128MB)</span>
-        </a>
+        
     </div>
+    
 </div>
+
+<!-- Add the gallery lightbox script -->
+<link rel="stylesheet" href="/css/gallery-lightbox.css">
+<script src="/js/gallery-lightbox.js"></script>
 
 </div>
 
